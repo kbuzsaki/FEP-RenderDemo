@@ -40,11 +40,11 @@ public class Main {
         int count = 0;
         while(true) {
             // print to show the main thread loop
-            System.out.println("main thread blocked by loop");
+//            System.out.println("main thread blocked by loop");
             
             // change the animations at some point
             if(count == 100) {
-                screen.getAnimList().add(new Animation(new File("resources/arrowUp.png")));
+                screen.getAnimList().add(new Animation(new File("resources/arrowUp2.png")));
             }
             else if(count == 250) {
                 screen.getAnimList().remove(0);

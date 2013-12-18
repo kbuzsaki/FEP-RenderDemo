@@ -3,8 +3,8 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +57,7 @@ public class DoubleBufferedScreen extends Component {
         bufferGraphics.clearRect(0, 0, width, height);
         
         for(Animation a : animations) {
-            bufferGraphics.drawRenderedImage(a.getFrame(tick), null);
+            bufferGraphics.drawRenderedImage(a.getFrame(tick), new AffineTransform());
         }
         
         bufferGraphics.dispose();
